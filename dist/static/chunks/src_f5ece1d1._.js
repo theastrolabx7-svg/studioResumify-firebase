@@ -1454,10 +1454,10 @@ function BuilderPage() {
                 });
                 setData({
                     personalInfo: {
-                        fullName: extracted.personalInformation.fullName,
-                        email: extracted.personalInformation.email,
-                        phoneNumber: extracted.personalInformation.phoneNumber,
-                        address: extracted.personalInformation.address,
+                        fullName: extracted.personalInformation.fullName || '',
+                        email: extracted.personalInformation.email || '',
+                        phoneNumber: extracted.personalInformation.phoneNumber || '',
+                        address: extracted.personalInformation.address || '',
                         linkedIn: extracted.personalInformation.linkedIn,
                         portfolioWebsite: extracted.personalInformation.portfolioWebsite
                     },
@@ -1505,15 +1505,22 @@ function BuilderPage() {
         window.print();
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "flex flex-col min-h-screen bg-background pb-20 no-print",
+        className: "flex flex-col min-h-screen bg-background pb-20",
         children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Navbar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "no-print",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Navbar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                    fileName: "[project]/src/app/builder/page.tsx",
+                    lineNumber: 162,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
                 fileName: "[project]/src/app/builder/page.tsx",
-                lineNumber: 163,
+                lineNumber: 161,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
-                className: "container mx-auto px-4 mt-8 flex-1 max-w-7xl",
+                className: "container mx-auto px-4 mt-8 flex-1 max-w-7xl no-print",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "grid grid-cols-1 lg:grid-cols-2 gap-8 h-full",
                     children: [
@@ -2587,7 +2594,7 @@ function BuilderPage() {
                                     columnNumber: 14
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "bg-white rounded-lg shadow-2xl origin-top transition-transform duration-300",
+                                    className: "bg-white rounded-lg shadow-2xl origin-top transition-transform duration-300 overflow-hidden",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$templates$2f$ModernTemplate$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                         data: data
                                     }, void 0, false, {
@@ -2618,7 +2625,7 @@ function BuilderPage() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "hidden print:block absolute inset-0 bg-white",
+                className: "hidden print:block print-container",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$templates$2f$ModernTemplate$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                     data: data
                 }, void 0, false, {
@@ -2634,7 +2641,7 @@ function BuilderPage() {
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/builder/page.tsx",
-        lineNumber: 162,
+        lineNumber: 160,
         columnNumber: 5
     }, this);
 }

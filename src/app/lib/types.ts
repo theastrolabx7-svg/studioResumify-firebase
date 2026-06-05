@@ -37,6 +37,14 @@ export interface Certification {
   organization: string;
 }
 
+export interface ResumeCustomization {
+  shellType: 'minimal' | 'sidebar' | 'modern-accent' | 'blueprint';
+  colorPairing: 'classic-blue' | 'elegant-emerald' | 'royal-indigo' | 'slate-gray' | 'midnight-gold';
+  typography: 'inter-grotesk' | 'serif-classic' | 'mono-modern';
+  spacingDensity: 'compact' | 'standard' | 'spacious';
+  borderStyle: 'none' | 'thick-top' | 'full-shell' | 'accent-left';
+}
+
 export interface ResumeData {
   personalInfo: PersonalInfo;
   professionalSummary: string;
@@ -49,7 +57,16 @@ export interface ResumeData {
   projects: Project[];
   certifications: Certification[];
   languages: { language: string; proficiency?: string }[];
+  customization: ResumeCustomization;
 }
+
+export const defaultCustomization: ResumeCustomization = {
+  shellType: 'modern-accent',
+  colorPairing: 'classic-blue',
+  typography: 'inter-grotesk',
+  spacingDensity: 'standard',
+  borderStyle: 'thick-top',
+};
 
 export const emptyResumeData: ResumeData = {
   personalInfo: {
@@ -68,4 +85,5 @@ export const emptyResumeData: ResumeData = {
   projects: [],
   certifications: [],
   languages: [],
+  customization: defaultCustomization,
 };

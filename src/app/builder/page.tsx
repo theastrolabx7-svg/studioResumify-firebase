@@ -6,13 +6,14 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
-import { PlusCircle, Trash2, Download, ChevronLeft, ChevronRight, FileText, Cpu, Sparkles, Upload, CheckCircle } from 'lucide-react';
+import { PlusCircle, Trash2, Download, ChevronLeft, ChevronRight, FileText, Cpu, Sparkles, Upload, CheckCircle, Palette, Layout, Type, Maximize } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import ModernTemplate from '@/components/templates/ModernTemplate';
-import { ResumeData, emptyResumeData, Education, Experience } from '@/app/lib/types';
+import { ResumeData, emptyResumeData, Education, Experience, ResumeCustomization } from '@/app/lib/types';
 import { generateAiResumeContent } from '@/ai/flows/ai-resume-content-generator';
 import { extractResumeFromPDF } from '@/ai/flows/extract-resume-from-pdf-flow';
 import { useToast } from '@/hooks/use-toast';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
 export default function BuilderPage() {
   const [data, setData] = useState<ResumeData>(emptyResumeData);
@@ -28,6 +29,7 @@ export default function BuilderPage() {
     { label: 'Experience', id: 'experience' },
     { label: 'Skills', id: 'skills' },
     { label: 'Projects', id: 'projects' },
+    { label: 'Style', id: 'style' },
     { label: 'Finish', id: 'finish' },
   ];
 
@@ -71,6 +73,13 @@ export default function BuilderPage() {
 
   const removeExperience = (id: string) => {
     setData((prev) => ({ ...prev, experience: prev.experience.filter((e) => e.id !== id) }));
+  };
+
+  const updateCustomization = (field: keyof ResumeCustomization, value: string) => {
+    setData(prev => ({
+      ...prev,
+      customization: { ...prev.customization, [field]: value }
+    }));
   };
 
   const handleAiImprove = async () => {
@@ -120,7 +129,8 @@ export default function BuilderPage() {
       try {
         const extracted = await extractResumeFromPDF({ pdfDataUri: dataUri });
         
-        setData({
+        setData(prev => ({
+          ...prev,
           personalInfo: {
             fullName: extracted.personalInformation.fullName || '',
             email: extracted.personalInformation.email || '',
@@ -130,16 +140,16 @@ export default function BuilderPage() {
             portfolioWebsite: extracted.personalInformation.portfolioWebsite,
           },
           professionalSummary: extracted.professionalSummary || '',
-          education: (extracted.education || []).map(edu => ({ ...edu, id: crypto.randomUUID() })),
+          education: (extracted.education || []).map(edu => ({ ...edu, id: crypto.randomUUID(), institution: edu.institution, degree: edu.degree, year: edu.year, gradeOrCGPA: edu.gradeOrCGPA })),
           experience: (extracted.experience || []).map(exp => ({ ...exp, id: crypto.randomUUID() })),
           skills: {
             technicalSkills: extracted.skills?.technicalSkills || [],
             softSkills: extracted.skills?.softSkills || [],
           },
-          projects: (extracted.projects || []).map(p => ({ ...p, id: crypto.randomUUID() })),
-          certifications: (extracted.certifications || []).map(c => ({ ...c, id: crypto.randomUUID() })),
+          projects: (extracted.projects || []).map(p => ({ ...p, id: crypto.randomUUID(), projectName: p.projectName, description: p.description })),
+          certifications: (extracted.certifications || []).map(c => ({ ...c, id: crypto.randomUUID(), certificateName: c.certificateName, organization: c.organization })),
           languages: extracted.languages || [],
-        });
+        }));
         
         toast({ title: 'Resume Extracted', description: 'Your data has been successfully imported from the PDF.' });
         setActiveStep(0);
@@ -150,10 +160,6 @@ export default function BuilderPage() {
       }
     };
     reader.readAsDataURL(file);
-  };
-
-  const handlePrint = () => {
-    window.print();
   };
 
   return (
@@ -168,18 +174,12 @@ export default function BuilderPage() {
           <div className="space-y-6">
             <div className="flex items-center justify-between mb-4">
               <h1 className="text-2xl font-headline font-bold flex items-center gap-2">
-                <FileText className="text-primary" /> Resume Builder
+                <FileText className="text-primary" /> Builder
               </h1>
               <div className="flex gap-2">
-                <input
-                  type="file"
-                  ref={fileInputRef}
-                  className="hidden"
-                  accept="application/pdf"
-                  onChange={handleFileUpload}
-                />
+                <input type="file" ref={fileInputRef} className="hidden" accept="application/pdf" onChange={handleFileUpload} />
                 <Button variant="outline" size="sm" onClick={() => fileInputRef.current?.click()} disabled={isAiLoading}>
-                  <Upload className="h-4 w-4 mr-2" /> Upload PDF
+                  <Upload className="h-4 w-4 mr-2" /> Import
                 </Button>
                 <Button variant="outline" size="sm" onClick={handleAiImprove} disabled={isAiLoading} className="text-accent border-accent/30 hover:bg-accent/10">
                   <Sparkles className="h-4 w-4 mr-2" /> {isAiLoading ? 'Magic...' : 'AI Enhance'}
@@ -239,7 +239,7 @@ export default function BuilderPage() {
                     <Textarea 
                       value={data.professionalSummary} 
                       onChange={(e) => setData(prev => ({ ...prev, professionalSummary: e.target.value }))} 
-                      placeholder="Brief introduction about your professional background and goals..."
+                      placeholder="Brief introduction..."
                       className="min-h-[200px]"
                     />
                   </div>
@@ -249,32 +249,16 @@ export default function BuilderPage() {
                   <div className="space-y-6">
                     <div className="flex items-center justify-between">
                       <h2 className="text-lg font-bold">Education</h2>
-                      <Button variant="outline" size="sm" onClick={addEducation}>
-                        <PlusCircle className="h-4 w-4 mr-2" /> Add
-                      </Button>
+                      <Button variant="outline" size="sm" onClick={addEducation}><PlusCircle className="h-4 w-4 mr-2" /> Add</Button>
                     </div>
                     {data.education.map((edu) => (
                       <div key={edu.id} className="p-4 border rounded-xl relative space-y-4 bg-muted/20">
-                        <Button variant="ghost" size="icon" className="absolute top-2 right-2 text-destructive" onClick={() => removeEducation(edu.id)}>
-                          <Trash2 className="h-4 w-4" />
-                        </Button>
+                        <Button variant="ghost" size="icon" className="absolute top-2 right-2 text-destructive" onClick={() => removeEducation(edu.id)}><Trash2 className="h-4 w-4" /></Button>
                         <div className="grid grid-cols-2 gap-4">
-                          <div className="space-y-2">
-                            <Label>Institution</Label>
-                            <Input value={edu.institution} onChange={(e) => updateEducation(edu.id, 'institution', e.target.value)} />
-                          </div>
-                          <div className="space-y-2">
-                            <Label>Degree</Label>
-                            <Input value={edu.degree} onChange={(e) => updateEducation(edu.id, 'degree', e.target.value)} />
-                          </div>
-                          <div className="space-y-2">
-                            <Label>Year</Label>
-                            <Input value={edu.year} onChange={(e) => updateEducation(edu.id, 'year', e.target.value)} placeholder="2018 - 2022" />
-                          </div>
-                          <div className="space-y-2">
-                            <Label>Grade / CGPA</Label>
-                            <Input value={edu.gradeOrCGPA} onChange={(e) => updateEducation(edu.id, 'gradeOrCGPA', e.target.value)} />
-                          </div>
+                          <div className="space-y-2"><Label>Institution</Label><Input value={edu.institution} onChange={(e) => updateEducation(edu.id, 'institution', e.target.value)} /></div>
+                          <div className="space-y-2"><Label>Degree</Label><Input value={edu.degree} onChange={(e) => updateEducation(edu.id, 'degree', e.target.value)} /></div>
+                          <div className="space-y-2"><Label>Year</Label><Input value={edu.year} onChange={(e) => updateEducation(edu.id, 'year', e.target.value)} /></div>
+                          <div className="space-y-2"><Label>Grade</Label><Input value={edu.gradeOrCGPA} onChange={(e) => updateEducation(edu.id, 'gradeOrCGPA', e.target.value)} /></div>
                         </div>
                       </div>
                     ))}
@@ -285,34 +269,20 @@ export default function BuilderPage() {
                   <div className="space-y-6">
                     <div className="flex items-center justify-between">
                       <h2 className="text-lg font-bold">Experience</h2>
-                      <Button variant="outline" size="sm" onClick={addExperience}>
-                        <PlusCircle className="h-4 w-4 mr-2" /> Add
-                      </Button>
+                      <Button variant="outline" size="sm" onClick={addExperience}><PlusCircle className="h-4 w-4 mr-2" /> Add</Button>
                     </div>
                     {data.experience.map((exp) => (
                       <div key={exp.id} className="p-4 border rounded-xl relative space-y-4 bg-muted/20">
-                        <Button variant="ghost" size="icon" className="absolute top-2 right-2 text-destructive" onClick={() => removeExperience(exp.id)}>
-                          <Trash2 className="h-4 w-4" />
-                        </Button>
+                        <Button variant="ghost" size="icon" className="absolute top-2 right-2 text-destructive" onClick={() => removeExperience(exp.id)}><Trash2 className="h-4 w-4" /></Button>
                         <div className="grid grid-cols-2 gap-4">
-                          <div className="space-y-2">
-                            <Label>Company Name</Label>
-                            <Input value={exp.companyName} onChange={(e) => updateExperience(exp.id, 'companyName', e.target.value)} />
-                          </div>
-                          <div className="space-y-2">
-                            <Label>Job Title</Label>
-                            <Input value={exp.jobTitle} onChange={(e) => updateExperience(exp.id, 'jobTitle', e.target.value)} />
-                          </div>
+                          <div className="space-y-2"><Label>Company</Label><Input value={exp.companyName} onChange={(e) => updateExperience(exp.id, 'companyName', e.target.value)} /></div>
+                          <div className="space-y-2"><Label>Title</Label><Input value={exp.jobTitle} onChange={(e) => updateExperience(exp.id, 'jobTitle', e.target.value)} /></div>
+                          <div className="space-y-2 col-span-2"><Label>Duration</Label><Input value={exp.duration} onChange={(e) => updateExperience(exp.id, 'duration', e.target.value)} /></div>
                           <div className="space-y-2 col-span-2">
-                            <Label>Duration</Label>
-                            <Input value={exp.duration} onChange={(e) => updateExperience(exp.id, 'duration', e.target.value)} placeholder="Jan 2020 - Present" />
-                          </div>
-                          <div className="space-y-2 col-span-2">
-                            <Label>Responsibilities (One per line)</Label>
+                            <Label>Responsibilities</Label>
                             <Textarea 
                               value={exp.responsibilities.join('\n')} 
                               onChange={(e) => updateExperience(exp.id, 'responsibilities', e.target.value.split('\n'))}
-                              placeholder="Managed a team of 5...&#10;Increased sales by 20%..."
                             />
                           </div>
                         </div>
@@ -330,7 +300,6 @@ export default function BuilderPage() {
                         <Input 
                           value={data.skills.technicalSkills.join(', ')} 
                           onChange={(e) => setData(prev => ({ ...prev, skills: { ...prev.skills, technicalSkills: e.target.value.split(',').map(s => s.trim()) }}))}
-                          placeholder="React, Next.js, TypeScript, Node.js"
                         />
                       </div>
                       <div className="space-y-2">
@@ -338,7 +307,6 @@ export default function BuilderPage() {
                         <Input 
                           value={data.skills.softSkills.join(', ')} 
                           onChange={(e) => setData(prev => ({ ...prev, skills: { ...prev.skills, softSkills: e.target.value.split(',').map(s => s.trim()) }}))}
-                          placeholder="Leadership, Communication, Time Management"
                         />
                       </div>
                     </div>
@@ -372,15 +340,90 @@ export default function BuilderPage() {
                 )}
 
                 {activeStep === 6 && (
+                  <div className="space-y-8">
+                    <div className="flex items-center gap-2 border-b pb-2">
+                      <Palette className="h-5 w-5 text-primary" />
+                      <h2 className="text-lg font-bold">Style Customization</h2>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="space-y-2">
+                        <Label className="flex items-center gap-2"><Layout className="h-4 w-4" /> Blueprint Shell</Label>
+                        <Select value={data.customization.shellType} onValueChange={(v) => updateCustomization('shellType', v)}>
+                          <SelectTrigger><SelectValue /></SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="minimal">Minimalist Shell</SelectItem>
+                            <SelectItem value="sidebar">Modern Sidebar</SelectItem>
+                            <SelectItem value="modern-accent">Accent Header</SelectItem>
+                            <SelectItem value="blueprint">Blueprint Structure</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
+
+                      <div className="space-y-2">
+                        <Label className="flex items-center gap-2"><Palette className="h-4 w-4" /> Brand Accent Pairing</Label>
+                        <Select value={data.customization.colorPairing} onValueChange={(v) => updateCustomization('colorPairing', v)}>
+                          <SelectTrigger><SelectValue /></SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="classic-blue">Professional Blue</SelectItem>
+                            <SelectItem value="elegant-emerald">Elegant Emerald</SelectItem>
+                            <SelectItem value="royal-indigo">Royal Indigo</SelectItem>
+                            <SelectItem value="slate-gray">Slate Gray</SelectItem>
+                            <SelectItem value="midnight-gold">Midnight & Gold</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
+
+                      <div className="space-y-2">
+                        <Label className="flex items-center gap-2"><Type className="h-4 w-4" /> Premium Typography</Label>
+                        <Select value={data.customization.typography} onValueChange={(v) => updateCustomization('typography', v)}>
+                          <SelectTrigger><SelectValue /></SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="inter-grotesk">Inter & Space Grotesk</SelectItem>
+                            <SelectItem value="serif-classic">Classic Serif (Lora)</SelectItem>
+                            <SelectItem value="mono-modern">Modern Mono (JetBrains)</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
+
+                      <div className="space-y-2">
+                        <Label className="flex items-center gap-2"><Maximize className="h-4 w-4" /> Spacing Density</Label>
+                        <Select value={data.customization.spacingDensity} onValueChange={(v) => updateCustomization('spacingDensity', v)}>
+                          <SelectTrigger><SelectValue /></SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="compact">High Density (Compact)</SelectItem>
+                            <SelectItem value="standard">Standard Spacing</SelectItem>
+                            <SelectItem value="spacious">Low Density (Spacious)</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
+
+                      <div className="space-y-2 col-span-2">
+                        <Label>Shell Accent Borders</Label>
+                        <Select value={data.customization.borderStyle} onValueChange={(v) => updateCustomization('borderStyle', v)}>
+                          <SelectTrigger><SelectValue /></SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="none">No Border</SelectItem>
+                            <SelectItem value="thick-top">Thick Top Accent</SelectItem>
+                            <SelectItem value="full-shell">Full Shell Border</SelectItem>
+                            <SelectItem value="accent-left">Left Margin Accent</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {activeStep === 7 && (
                   <div className="space-y-6 text-center py-8">
                     <div className="bg-primary/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
                       <CheckCircle className="h-10 w-10 text-primary" />
                     </div>
-                    <h2 className="text-2xl font-bold">Resume Ready!</h2>
-                    <p className="text-muted-foreground">You have successfully filled in all sections. Review your preview on the right and download your PDF.</p>
+                    <h2 className="text-2xl font-bold">Ready to Export!</h2>
+                    <p className="text-muted-foreground">Your custom blueprint is ready. Review your preview and download your high-density PDF.</p>
                     <div className="flex justify-center gap-4">
-                      <Button size="lg" className="bg-primary" onClick={handlePrint}>
-                        <Download className="mr-2 h-5 w-5" /> Download PDF
+                      <Button size="lg" className="bg-primary" onClick={() => window.print()}>
+                        <Download className="mr-2 h-5 w-5" /> Download A4 PDF
                       </Button>
                     </div>
                   </div>
@@ -403,17 +446,13 @@ export default function BuilderPage() {
           {/* Preview Side */}
           <div className="hidden lg:block sticky top-24 h-[calc(100vh-120px)] overflow-y-auto pr-4 custom-scrollbar">
              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-sm font-bold uppercase tracking-widest text-muted-foreground">Live Preview</h2>
+                <h2 className="text-sm font-bold uppercase tracking-widest text-muted-foreground">Premium Preview</h2>
                 <div className="flex items-center gap-2">
-                  <span className="text-xs text-muted-foreground">Template: Modern</span>
-                  <div className="flex gap-1">
-                    <div className="w-3 h-3 rounded-full bg-slate-900 border" />
-                    <div className="w-3 h-3 rounded-full bg-primary" />
-                  </div>
+                  <span className="text-xs text-muted-foreground">A4 Ratio</span>
                 </div>
              </div>
              
-             <div className="bg-white rounded-lg shadow-2xl origin-top transition-transform duration-300 overflow-hidden">
+             <div className="bg-white rounded-lg shadow-2xl origin-top transition-all duration-300 overflow-hidden transform scale-[0.9] origin-top">
                <ModernTemplate data={data} />
              </div>
           </div>

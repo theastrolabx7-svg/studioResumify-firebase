@@ -220,7 +220,7 @@ const ai = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$g
     plugins: [
         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$genkit$2d$ai$2f$google$2d$genai$2f$lib$2f$googleai$2f$index$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["googleAI"])()
     ],
-    model: 'googleai/gemini-2.5-flash'
+    model: 'googleai/gemini-1.5-flash'
 });
 }),
 "[project]/src/ai/flows/ai-resume-content-generator.ts [app-rsc] (ecmascript)", ((__turbopack_context__) => {
