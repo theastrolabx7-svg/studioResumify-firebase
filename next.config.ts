@@ -2,6 +2,7 @@ import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
   /* config options here */
+  distDir: 'dist', // Ensure the output directory is 'dist' to satisfy deployment requirements
   typescript: {
     ignoreBuildErrors: true,
   },

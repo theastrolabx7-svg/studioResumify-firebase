@@ -8,7 +8,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Separator } from '@/components/ui/separator';
-import { PlusCircle, Trash2, Download, ChevronLeft, ChevronRight, FileText, Cpu, Sparkles, Upload } from 'lucide-react';
+import { PlusCircle, Trash2, Download, ChevronLeft, ChevronRight, FileText, Cpu, Sparkles, Upload, CheckCircle } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import ModernTemplate from '@/components/templates/ModernTemplate';
 import { ResumeData, emptyResumeData, Education, Experience, Project, Certification } from '@/app/lib/types';
@@ -425,25 +425,5 @@ export default function BuilderPage() {
         <ModernTemplate data={data} />
       </div>
     </div>
-  );
-}
-
-function CheckCircle(props: any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-      <polyline points="22 4 12 14.01 9 11.01" />
-    </svg>
   );
 }
