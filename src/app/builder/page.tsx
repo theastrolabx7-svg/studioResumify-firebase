@@ -6,12 +6,10 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Separator } from '@/components/ui/separator';
 import { PlusCircle, Trash2, Download, ChevronLeft, ChevronRight, FileText, Cpu, Sparkles, Upload, CheckCircle } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import ModernTemplate from '@/components/templates/ModernTemplate';
-import { ResumeData, emptyResumeData, Education, Experience, Project, Certification } from '@/app/lib/types';
+import { ResumeData, emptyResumeData, Education, Experience } from '@/app/lib/types';
 import { generateAiResumeContent } from '@/ai/flows/ai-resume-content-generator';
 import { extractResumeFromPDF } from '@/ai/flows/extract-resume-from-pdf-flow';
 import { useToast } from '@/hooks/use-toast';
@@ -124,10 +122,10 @@ export default function BuilderPage() {
         
         setData({
           personalInfo: {
-            fullName: extracted.personalInformation.fullName,
-            email: extracted.personalInformation.email,
-            phoneNumber: extracted.personalInformation.phoneNumber,
-            address: extracted.personalInformation.address,
+            fullName: extracted.personalInformation.fullName || '',
+            email: extracted.personalInformation.email || '',
+            phoneNumber: extracted.personalInformation.phoneNumber || '',
+            address: extracted.personalInformation.address || '',
             linkedIn: extracted.personalInformation.linkedIn,
             portfolioWebsite: extracted.personalInformation.portfolioWebsite,
           },
@@ -159,10 +157,12 @@ export default function BuilderPage() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-background pb-20 no-print">
-      <Navbar />
+    <div className="flex flex-col min-h-screen bg-background pb-20">
+      <div className="no-print">
+        <Navbar />
+      </div>
       
-      <main className="container mx-auto px-4 mt-8 flex-1 max-w-7xl">
+      <main className="container mx-auto px-4 mt-8 flex-1 max-w-7xl no-print">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 h-full">
           {/* Form Side */}
           <div className="space-y-6">
@@ -413,7 +413,7 @@ export default function BuilderPage() {
                 </div>
              </div>
              
-             <div className="bg-white rounded-lg shadow-2xl origin-top transition-transform duration-300">
+             <div className="bg-white rounded-lg shadow-2xl origin-top transition-transform duration-300 overflow-hidden">
                <ModernTemplate data={data} />
              </div>
           </div>
@@ -421,7 +421,7 @@ export default function BuilderPage() {
       </main>
 
       {/* Print-only View */}
-      <div className="hidden print:block absolute inset-0 bg-white">
+      <div className="hidden print:block print-container">
         <ModernTemplate data={data} />
       </div>
     </div>
