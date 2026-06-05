@@ -1563,6 +1563,10 @@ body {
   background-color: hsl(var(--background) / .95);
 }
 
+.bg-black\/10 {
+  background-color: rgba(0, 0, 0, .1);
+}
+
 .bg-black\/80 {
   background-color: rgba(0, 0, 0, .8);
 }
@@ -1649,10 +1653,6 @@ body {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity, 1));
-}
-
-.bg-\[url\(\'https\:\/\/www\.transparenttextures\.com\/patterns\/carbon-fibre\.png\'\)\] {
-  background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
 }
 
 .bg-gradient-to-tr {
@@ -1970,10 +1970,6 @@ body {
   text-transform: uppercase;
 }
 
-.lowercase {
-  text-transform: lowercase;
-}
-
 .italic {
   font-style: italic;
 }
@@ -2067,11 +2063,6 @@ body {
 
 .text-accent-foreground {
   color: hsl(var(--accent-foreground));
-}
-
-.text-blue-500 {
-  --tw-text-opacity: 1;
-  color: rgba(59, 130, 246, var(--tw-text-opacity, 1));
 }
 
 .text-card-foreground {
