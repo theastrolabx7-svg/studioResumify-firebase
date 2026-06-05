@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { FileText, Cpu, Info, PhoneCall } from 'lucide-react';
+import { FileText } from 'lucide-react';
 
 export default function Navbar() {
   return (
@@ -30,7 +30,7 @@ export default function Navbar() {
         </div>
         <div className="flex items-center space-x-4">
           <Button variant="ghost" size="sm" asChild>
-            <Link href="/login">Login</Link>
+            <Link href="/builder">Create Resume</Link>
           </Button>
           <Button size="sm" className="bg-primary hover:bg-primary/90" asChild>
             <Link href="/builder">Get Started</Link>

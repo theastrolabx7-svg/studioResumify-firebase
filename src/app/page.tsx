@@ -85,36 +85,35 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: 'AI Smart Content',
-                desc: 'Generate professional summaries and job descriptions with a single click using our advanced AI.',
-                icon: Sparkles,
-                color: 'text-accent'
-              },
-              {
-                title: 'ATS-Friendly Templates',
-                desc: 'Our templates are specifically engineered to pass through Applicant Tracking Systems effortlessly.',
-                icon: CheckCircle,
-                color: 'text-primary'
-              },
-              {
-                title: 'PDF Content Extraction',
-                desc: 'Upload your old PDF resume and let our AI extract all the data into our editable builder.',
-                icon: FileUp,
-                color: 'text-blue-500'
-              }
-            ].map((feature, i) => (
-              <div key={i} className="p-8 rounded-2xl border bg-background hover:shadow-xl transition-all duration-300 group">
-                <div className={`p-3 rounded-xl bg-muted w-fit mb-6 group-hover:scale-110 transition-transform`}>
-                  <feature.icon className={`h-8 w-8 ${feature.color}`} />
-                </div>
-                <h3 className="text-xl font-bold mb-4">{feature.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {feature.desc}
-                </p>
+            <div className="p-8 rounded-2xl border bg-background hover:shadow-xl transition-all duration-300 group">
+              <div className="p-3 rounded-xl bg-muted w-fit mb-6 group-hover:scale-110 transition-transform">
+                <Sparkles className="h-8 w-8 text-accent" />
               </div>
-            ))}
+              <h3 className="text-xl font-bold mb-4">AI Smart Content</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Generate professional summaries and job descriptions with a single click using our advanced AI.
+              </p>
+            </div>
+            
+            <div className="p-8 rounded-2xl border bg-background hover:shadow-xl transition-all duration-300 group">
+              <div className="p-3 rounded-xl bg-muted w-fit mb-6 group-hover:scale-110 transition-transform">
+                <CheckCircle className="h-8 w-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">ATS-Friendly Templates</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Our templates are specifically engineered to pass through Applicant Tracking Systems effortlessly.
+              </p>
+            </div>
+            
+            <div className="p-8 rounded-2xl border bg-background hover:shadow-xl transition-all duration-300 group">
+              <div className="p-3 rounded-xl bg-muted w-fit mb-6 group-hover:scale-110 transition-transform">
+                <FileUp className="h-8 w-8 text-blue-500" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">PDF Content Extraction</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Upload your old PDF resume and let our AI extract all the data into our editable builder.
+              </p>
+            </div>
           </div>
         </div>
       </section>
