@@ -1,0 +1,17 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "hero-resume",
+      "description": "Professional resume template on a clean desk",
+      "imageUrl": "https://picsum.photos/seed/resumify-hero/1200/800",
+      "imageHint": "resume desk"
+    },
+    {
+      "id": "feature-ai",
+      "description": "AI and technology concept",
+      "imageUrl": "https://picsum.photos/seed/resumify-ai/600/400",
+      "imageHint": "artificial intelligence"
+    }
+  ]
+}
