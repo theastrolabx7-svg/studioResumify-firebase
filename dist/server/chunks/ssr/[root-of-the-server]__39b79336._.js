@@ -490,7 +490,7 @@ function ModernTemplate({ data }) {
             children: children
         }, void 0, false, {
             fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-            lineNumber: 81,
+            lineNumber: 82,
             columnNumber: 5
         }, this);
     const ContentWrapper = ()=>{
@@ -504,7 +504,7 @@ function ModernTemplate({ data }) {
                             children: "Professional Summary"
                         }, void 0, false, {
                             fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                            lineNumber: 96,
+                            lineNumber: 97,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -512,13 +512,13 @@ function ModernTemplate({ data }) {
                             children: professionalSummary
                         }, void 0, false, {
                             fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                            lineNumber: 97,
+                            lineNumber: 98,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                    lineNumber: 95,
+                    lineNumber: 96,
                     columnNumber: 11
                 }, this),
                 experience.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -528,7 +528,7 @@ function ModernTemplate({ data }) {
                             children: "Experience"
                         }, void 0, false, {
                             fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                            lineNumber: 106,
+                            lineNumber: 107,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -543,7 +543,7 @@ function ModernTemplate({ data }) {
                                                     children: exp.jobTitle
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                                    lineNumber: 111,
+                                                    lineNumber: 112,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -551,13 +551,13 @@ function ModernTemplate({ data }) {
                                                     children: exp.duration
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                                    lineNumber: 112,
+                                                    lineNumber: 113,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                            lineNumber: 110,
+                                            lineNumber: 111,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -565,7 +565,7 @@ function ModernTemplate({ data }) {
                                             children: exp.companyName
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                            lineNumber: 114,
+                                            lineNumber: 115,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -574,29 +574,29 @@ function ModernTemplate({ data }) {
                                                     children: resp
                                                 }, i, false, {
                                                     fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                                    lineNumber: 117,
+                                                    lineNumber: 118,
                                                     columnNumber: 23
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                            lineNumber: 115,
+                                            lineNumber: 116,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, exp.id, true, {
                                     fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                    lineNumber: 109,
+                                    lineNumber: 110,
                                     columnNumber: 17
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                            lineNumber: 107,
+                            lineNumber: 108,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                    lineNumber: 105,
+                    lineNumber: 106,
                     columnNumber: 11
                 }, this),
                 education.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -606,7 +606,7 @@ function ModernTemplate({ data }) {
                             children: "Education"
                         }, void 0, false, {
                             fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                            lineNumber: 129,
+                            lineNumber: 130,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -621,7 +621,7 @@ function ModernTemplate({ data }) {
                                                     children: edu.institution
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                                    lineNumber: 134,
+                                                    lineNumber: 135,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -629,7 +629,7 @@ function ModernTemplate({ data }) {
                                                     children: edu.degree
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                                    lineNumber: 135,
+                                                    lineNumber: 136,
                                                     columnNumber: 21
                                                 }, this),
                                                 edu.gradeOrCGPA && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -640,13 +640,13 @@ function ModernTemplate({ data }) {
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                                    lineNumber: 136,
+                                                    lineNumber: 137,
                                                     columnNumber: 41
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                            lineNumber: 133,
+                                            lineNumber: 134,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -654,24 +654,24 @@ function ModernTemplate({ data }) {
                                             children: edu.year
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                            lineNumber: 138,
+                                            lineNumber: 139,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, edu.id, true, {
                                     fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                    lineNumber: 132,
+                                    lineNumber: 133,
                                     columnNumber: 17
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                            lineNumber: 130,
+                            lineNumber: 131,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                    lineNumber: 128,
+                    lineNumber: 129,
                     columnNumber: 11
                 }, this),
                 projects.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -681,7 +681,7 @@ function ModernTemplate({ data }) {
                             children: "Projects"
                         }, void 0, false, {
                             fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                            lineNumber: 148,
+                            lineNumber: 149,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -693,7 +693,7 @@ function ModernTemplate({ data }) {
                                             children: proj.projectName
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                            lineNumber: 152,
+                                            lineNumber: 153,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -701,30 +701,30 @@ function ModernTemplate({ data }) {
                                             children: proj.description
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                            lineNumber: 153,
+                                            lineNumber: 154,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, proj.id, true, {
                                     fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                    lineNumber: 151,
+                                    lineNumber: 152,
                                     columnNumber: 17
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                            lineNumber: 149,
+                            lineNumber: 150,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                    lineNumber: 147,
+                    lineNumber: 148,
                     columnNumber: 11
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-            lineNumber: 92,
+            lineNumber: 93,
             columnNumber: 7
         }, this);
         const sideContent = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -736,7 +736,7 @@ function ModernTemplate({ data }) {
                             children: "Skills"
                         }, void 0, false, {
                             fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                            lineNumber: 170,
+                            lineNumber: 171,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -749,7 +749,7 @@ function ModernTemplate({ data }) {
                                             children: "Technical"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                            lineNumber: 174,
+                                            lineNumber: 175,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -759,18 +759,18 @@ function ModernTemplate({ data }) {
                                                     children: skill
                                                 }, i, false, {
                                                     fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                                    lineNumber: 177,
+                                                    lineNumber: 178,
                                                     columnNumber: 23
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                            lineNumber: 175,
+                                            lineNumber: 176,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                    lineNumber: 173,
+                                    lineNumber: 174,
                                     columnNumber: 17
                                 }, this),
                                 skills.softSkills.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -780,7 +780,7 @@ function ModernTemplate({ data }) {
                                             children: "Soft Skills"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                            lineNumber: 186,
+                                            lineNumber: 187,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -792,37 +792,37 @@ function ModernTemplate({ data }) {
                                                             className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("w-1 h-1 rounded-full", accentColor)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                                            lineNumber: 190,
+                                                            lineNumber: 191,
                                                             columnNumber: 25
                                                         }, this),
                                                         skill
                                                     ]
                                                 }, i, true, {
                                                     fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                                    lineNumber: 189,
+                                                    lineNumber: 190,
                                                     columnNumber: 23
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                            lineNumber: 187,
+                                            lineNumber: 188,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                    lineNumber: 185,
+                                    lineNumber: 186,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                            lineNumber: 171,
+                            lineNumber: 172,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                    lineNumber: 169,
+                    lineNumber: 170,
                     columnNumber: 11
                 }, this),
                 certifications.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -831,7 +831,7 @@ function ModernTemplate({ data }) {
                             children: "Certifications"
                         }, void 0, false, {
                             fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                            lineNumber: 204,
+                            lineNumber: 205,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -844,7 +844,7 @@ function ModernTemplate({ data }) {
                                             children: cert.certificateName
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                            lineNumber: 208,
+                                            lineNumber: 209,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -852,30 +852,30 @@ function ModernTemplate({ data }) {
                                             children: cert.organization
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                            lineNumber: 209,
+                                            lineNumber: 210,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, cert.id, true, {
                                     fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                    lineNumber: 207,
+                                    lineNumber: 208,
                                     columnNumber: 17
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                            lineNumber: 205,
+                            lineNumber: 206,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                    lineNumber: 203,
+                    lineNumber: 204,
                     columnNumber: 11
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-            lineNumber: 163,
+            lineNumber: 164,
             columnNumber: 7
         }, this);
         if (shellType === 'sidebar') {
@@ -887,7 +887,7 @@ function ModernTemplate({ data }) {
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                lineNumber: 220,
+                lineNumber: 221,
                 columnNumber: 9
             }, this);
         }
@@ -900,13 +900,13 @@ function ModernTemplate({ data }) {
                     children: sideContent
                 }, void 0, false, {
                     fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                    lineNumber: 230,
+                    lineNumber: 231,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-            lineNumber: 228,
+            lineNumber: 229,
             columnNumber: 7
         }, this);
     };
@@ -921,7 +921,7 @@ function ModernTemplate({ data }) {
                         children: personalInfo.fullName || 'Your Name'
                     }, void 0, false, {
                         fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                        lineNumber: 250,
+                        lineNumber: 251,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -931,67 +931,67 @@ function ModernTemplate({ data }) {
                                 children: personalInfo.email || 'hello@resume.com'
                             }, void 0, false, {
                                 fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                lineNumber: 258,
+                                lineNumber: 259,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 className: "opacity-30",
                                 children: "|"
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                lineNumber: 259,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                children: personalInfo.phoneNumber || '+1 000 000 000'
                             }, void 0, false, {
                                 fileName: "[project]/src/components/templates/ModernTemplate.tsx",
                                 lineNumber: 260,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "opacity-30",
-                                children: "|"
+                                children: personalInfo.phoneNumber || '+1 000 000 000'
                             }, void 0, false, {
                                 fileName: "[project]/src/components/templates/ModernTemplate.tsx",
                                 lineNumber: 261,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                children: personalInfo.address || 'City, Country'
+                                className: "opacity-30",
+                                children: "|"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/templates/ModernTemplate.tsx",
                                 lineNumber: 262,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                children: personalInfo.address || 'City, Country'
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/templates/ModernTemplate.tsx",
+                                lineNumber: 263,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                        lineNumber: 257,
+                        lineNumber: 258,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                lineNumber: 246,
+                lineNumber: 247,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(ContentWrapper, {}, void 0, false, {
                 fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                lineNumber: 267,
+                lineNumber: 268,
                 columnNumber: 7
             }, this),
             shellType === 'blueprint' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("mt-auto h-1 w-24 rounded-full", accentColor)
             }, void 0, false, {
                 fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                lineNumber: 271,
+                lineNumber: 272,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-        lineNumber: 238,
+        lineNumber: 239,
         columnNumber: 5
     }, this);
 }
