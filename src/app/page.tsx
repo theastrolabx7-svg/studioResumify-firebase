@@ -168,7 +168,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-12 pt-8 border-t text-center text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Resumify. All rights reserved.
+            © 2024 Resumify. All rights reserved.
           </div>
         </div>
       </footer>
