@@ -445,7 +445,7 @@ function ModernTemplate({ data }) {
         spacious: 'gap-10 p-14'
     }[spacingDensity];
     const sectionSpacing = spacingDensity === 'compact' ? 'mb-2' : spacingDensity === 'spacious' ? 'mb-6' : 'mb-4';
-    // Color Mappings (HSL based on pairing)
+    // Color Mappings
     const colorMap = {
         'classic-blue': 'text-[#0f172a] border-[#2563eb]',
         'elegant-emerald': 'text-[#064e3b] border-[#10b981]',
@@ -871,53 +871,6 @@ function ModernTemplate({ data }) {
                     fileName: "[project]/src/components/templates/ModernTemplate.tsx",
                     lineNumber: 203,
                     columnNumber: 11
-                }, this),
-                languages.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(SectionTitle, {
-                            children: "Languages"
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                            lineNumber: 219,
-                            columnNumber: 13
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                            className: "space-y-1",
-                            children: languages.map((lang, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                    className: "text-xs flex justify-between",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            className: "font-semibold text-slate-800",
-                                            children: lang.language
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                            lineNumber: 223,
-                                            columnNumber: 19
-                                        }, this),
-                                        lang.proficiency && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            className: "text-[10px] text-slate-500 italic",
-                                            children: lang.proficiency
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                            lineNumber: 224,
-                                            columnNumber: 40
-                                        }, this)
-                                    ]
-                                }, i, true, {
-                                    fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                    lineNumber: 222,
-                                    columnNumber: 17
-                                }, this))
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                            lineNumber: 220,
-                            columnNumber: 13
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                    lineNumber: 218,
-                    columnNumber: 11
                 }, this)
             ]
         }, void 0, true, {
@@ -934,7 +887,7 @@ function ModernTemplate({ data }) {
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                lineNumber: 235,
+                lineNumber: 220,
                 columnNumber: 9
             }, this);
         }
@@ -944,25 +897,16 @@ function ModernTemplate({ data }) {
                 mainContent,
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "grid grid-cols-2 gap-10",
-                    children: [
-                        sideContent,
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "flex flex-col gap-6"
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                            lineNumber: 247,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
+                    children: sideContent
+                }, void 0, false, {
                     fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                    lineNumber: 245,
+                    lineNumber: 230,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-            lineNumber: 243,
+            lineNumber: 228,
             columnNumber: 7
         }, this);
     };
@@ -977,18 +921,17 @@ function ModernTemplate({ data }) {
                         children: personalInfo.fullName || 'Your Name'
                     }, void 0, false, {
                         fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                        lineNumber: 268,
+                        lineNumber: 250,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "flex flex-wrap gap-x-4 gap-y-1 text-[11px] font-medium text-slate-500",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "flex items-center gap-1",
                                 children: personalInfo.email || 'hello@resume.com'
                             }, void 0, false, {
                                 fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                lineNumber: 276,
+                                lineNumber: 258,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -996,14 +939,14 @@ function ModernTemplate({ data }) {
                                 children: "|"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                lineNumber: 279,
+                                lineNumber: 259,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 children: personalInfo.phoneNumber || '+1 000 000 000'
                             }, void 0, false, {
                                 fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                lineNumber: 280,
+                                lineNumber: 260,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1011,64 +954,44 @@ function ModernTemplate({ data }) {
                                 children: "|"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                lineNumber: 281,
+                                lineNumber: 261,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 children: personalInfo.address || 'City, Country'
                             }, void 0, false, {
                                 fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                lineNumber: 282,
+                                lineNumber: 262,
                                 columnNumber: 11
-                            }, this),
-                            personalInfo.linkedIn && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "opacity-30",
-                                        children: "|"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                        lineNumber: 285,
-                                        columnNumber: 15
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "lowercase",
-                                        children: personalInfo.linkedIn
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                                        lineNumber: 286,
-                                        columnNumber: 15
-                                    }, this)
-                                ]
-                            }, void 0, true)
+                            }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                        lineNumber: 275,
+                        lineNumber: 257,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                lineNumber: 264,
+                lineNumber: 246,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(ContentWrapper, {}, void 0, false, {
                 fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                lineNumber: 293,
+                lineNumber: 267,
                 columnNumber: 7
             }, this),
             shellType === 'blueprint' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("mt-auto h-1 w-24 rounded-full", accentColor)
             }, void 0, false, {
                 fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-                lineNumber: 297,
+                lineNumber: 271,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/templates/ModernTemplate.tsx",
-        lineNumber: 256,
+        lineNumber: 238,
         columnNumber: 5
     }, this);
 }
@@ -1731,11 +1654,7 @@ function BuilderPage() {
                         professionalSummary: extracted.professionalSummary || '',
                         education: (extracted.education || []).map((edu)=>({
                                 ...edu,
-                                id: crypto.randomUUID(),
-                                institution: edu.institution,
-                                degree: edu.degree,
-                                year: edu.year,
-                                gradeOrCGPA: edu.gradeOrCGPA
+                                id: crypto.randomUUID()
                             })),
                         experience: (extracted.experience || []).map((exp)=>({
                                 ...exp,
@@ -1747,15 +1666,11 @@ function BuilderPage() {
                         },
                         projects: (extracted.projects || []).map((p)=>({
                                 ...p,
-                                id: crypto.randomUUID(),
-                                projectName: p.projectName,
-                                description: p.description
+                                id: crypto.randomUUID()
                             })),
                         certifications: (extracted.certifications || []).map((c)=>({
                                 ...c,
-                                id: crypto.randomUUID(),
-                                certificateName: c.certificateName,
-                                organization: c.organization
+                                id: crypto.randomUUID()
                             })),
                         languages: extracted.languages || []
                     }));

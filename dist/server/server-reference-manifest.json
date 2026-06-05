@@ -1,5 +1,36 @@
 {
-  "node": {},
+  "node": {
+    "40387da87d56227346857c4d13f587b570d51f71a3": {
+      "workers": {
+        "app/builder/page": {
+          "moduleId": "[project]/.next-internal/server/app/builder/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/ai/flows/ai-resume-content-generator.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/ai/flows/extract-resume-from-pdf-flow.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "generateAiResumeContent",
+          "filename": "src/ai/flows/ai-resume-content-generator.ts"
+        }
+      },
+      "layer": {
+        "app/builder/page": "action-browser"
+      },
+      "filename": "src/ai/flows/ai-resume-content-generator.ts",
+      "exportedName": "generateAiResumeContent"
+    },
+    "40827c88403485c05908d49b77d02f2a7195e3e9e2": {
+      "workers": {
+        "app/builder/page": {
+          "moduleId": "[project]/.next-internal/server/app/builder/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/ai/flows/ai-resume-content-generator.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/ai/flows/extract-resume-from-pdf-flow.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "extractResumeFromPDF",
+          "filename": "src/ai/flows/extract-resume-from-pdf-flow.ts"
+        }
+      },
+      "layer": {
+        "app/builder/page": "action-browser"
+      },
+      "filename": "src/ai/flows/extract-resume-from-pdf-flow.ts",
+      "exportedName": "extractResumeFromPDF"
+    }
+  },
   "edge": {},
   "encryptionKey": "3nbmqAFwFJXEUdhagJv0z3e+x80Wb0MEQVt1EDaudLA="
 }
