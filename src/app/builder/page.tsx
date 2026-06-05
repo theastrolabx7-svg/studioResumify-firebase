@@ -78,7 +78,7 @@ export default function BuilderPage() {
   const updateCustomization = (field: keyof ResumeCustomization, value: string) => {
     setData(prev => ({
       ...prev,
-      customization: { ...prev.customization, [field]: value }
+      customization: { ...prev.customization, [field]: value as any }
     }));
   };
 
@@ -140,14 +140,14 @@ export default function BuilderPage() {
             portfolioWebsite: extracted.personalInformation.portfolioWebsite,
           },
           professionalSummary: extracted.professionalSummary || '',
-          education: (extracted.education || []).map(edu => ({ ...edu, id: crypto.randomUUID(), institution: edu.institution, degree: edu.degree, year: edu.year, gradeOrCGPA: edu.gradeOrCGPA })),
+          education: (extracted.education || []).map(edu => ({ ...edu, id: crypto.randomUUID() })),
           experience: (extracted.experience || []).map(exp => ({ ...exp, id: crypto.randomUUID() })),
           skills: {
             technicalSkills: extracted.skills?.technicalSkills || [],
             softSkills: extracted.skills?.softSkills || [],
           },
-          projects: (extracted.projects || []).map(p => ({ ...p, id: crypto.randomUUID(), projectName: p.projectName, description: p.description })),
-          certifications: (extracted.certifications || []).map(c => ({ ...c, id: crypto.randomUUID(), certificateName: c.certificateName, organization: c.organization })),
+          projects: (extracted.projects || []).map(p => ({ ...p, id: crypto.randomUUID() })),
+          certifications: (extracted.certifications || []).map(c => ({ ...c, id: crypto.randomUUID() })),
           languages: extracted.languages || [],
         }));
         

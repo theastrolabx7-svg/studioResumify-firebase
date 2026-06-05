@@ -1,0 +1,20 @@
+{
+  "node": {
+    "40387da87d56227346857c4d13f587b570d51f71a3": {
+      "workers": {
+        "app/ai-generator/page": {
+          "moduleId": "[project]/.next-internal/server/app/ai-generator/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/ai/flows/ai-resume-content-generator.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "generateAiResumeContent",
+          "filename": "src/ai/flows/ai-resume-content-generator.ts"
+        }
+      },
+      "layer": {
+        "app/ai-generator/page": "action-browser"
+      },
+      "exportedName": "generateAiResumeContent",
+      "filename": "src/ai/flows/ai-resume-content-generator.ts"
+    }
+  },
+  "edge": {}
+}

@@ -1,4 +1,7 @@
 {
+  "/about/page": "app/about/page.js",
+  "/ai-generator/page": "app/ai-generator/page.js",
   "/builder/page": "app/builder/page.js",
+  "/contact/page": "app/contact/page.js",
   "/page": "app/page.js"
 }

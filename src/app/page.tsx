@@ -107,7 +107,7 @@ export default function Home() {
             
             <div className="p-8 rounded-2xl border bg-background hover:shadow-xl transition-all duration-300 group">
               <div className="p-3 rounded-xl bg-muted w-fit mb-6 group-hover:scale-110 transition-transform">
-                <FileUp className="h-8 w-8 text-blue-500" />
+                <FileUp className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-xl font-bold mb-4">PDF Content Extraction</h3>
               <p className="text-muted-foreground leading-relaxed">
@@ -120,7 +120,7 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="py-20 bg-primary text-primary-foreground relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10" />
+        <div className="absolute inset-0 bg-black/10 opacity-10" />
         <div className="container mx-auto px-4 max-w-4xl text-center relative z-10 space-y-8">
           <h2 className="text-4xl font-headline font-bold">Ready to build your next opportunity?</h2>
           <p className="text-primary-foreground/80 text-lg">

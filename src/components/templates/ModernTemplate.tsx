@@ -31,7 +31,7 @@ export default function ModernTemplate({ data }: TemplateProps) {
 
   const sectionSpacing = spacingDensity === 'compact' ? 'mb-2' : spacingDensity === 'spacious' ? 'mb-6' : 'mb-4';
 
-  // Color Mappings (HSL based on pairing)
+  // Color Mappings
   const colorMap = {
     'classic-blue': 'text-[#0f172a] border-[#2563eb]',
     'elegant-emerald': 'text-[#064e3b] border-[#10b981]',
@@ -212,21 +212,6 @@ export default function ModernTemplate({ data }: TemplateProps) {
             </ul>
           </section>
         )}
-
-        {/* Languages */}
-        {languages.length > 0 && (
-          <section>
-            <SectionTitle>Languages</SectionTitle>
-            <ul className="space-y-1">
-              {languages.map((lang, i) => (
-                <li key={i} className="text-xs flex justify-between">
-                  <span className="font-semibold text-slate-800">{lang.language}</span>
-                  {lang.proficiency && <span className="text-[10px] text-slate-500 italic">{lang.proficiency}</span>}
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
       </div>
     );
 
@@ -244,9 +229,6 @@ export default function ModernTemplate({ data }: TemplateProps) {
         {mainContent}
         <div className="grid grid-cols-2 gap-10">
           {sideContent}
-          <div className="flex flex-col gap-6">
-             {/* If we had more sections, they would go here in standard layout */}
-          </div>
         </div>
       </div>
     );
@@ -273,19 +255,11 @@ export default function ModernTemplate({ data }: TemplateProps) {
           {personalInfo.fullName || 'Your Name'}
         </h1>
         <div className="flex flex-wrap gap-x-4 gap-y-1 text-[11px] font-medium text-slate-500">
-          <span className="flex items-center gap-1">
-             {personalInfo.email || 'hello@resume.com'}
-          </span>
+          <span>{personalInfo.email || 'hello@resume.com'}</span>
           <span className="opacity-30">|</span>
           <span>{personalInfo.phoneNumber || '+1 000 000 000'}</span>
           <span className="opacity-30">|</span>
           <span>{personalInfo.address || 'City, Country'}</span>
-          {personalInfo.linkedIn && (
-            <>
-              <span className="opacity-30">|</span>
-              <span className="lowercase">{personalInfo.linkedIn}</span>
-            </>
-          )}
         </div>
       </header>
 
